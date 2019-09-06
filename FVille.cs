@@ -17,7 +17,7 @@ namespace SLAM5_lienBDD_CSharp
             InitializeComponent();
             //les Villes
             bsVille.DataSource = Modele.listeville();
-            dgvsalle.DataSource = bsVille.DataSource;
+            dgvville.DataSource = bsVille.DataSource;
             //les Salles
             bssalle.DataSource = Modele.listesalles();
             dgvsalle.DataSource = bssalle.DataSource;
