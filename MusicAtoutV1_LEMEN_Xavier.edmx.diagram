@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5f65b98ac4314c14956c14df63592561" Name="Diagram1">
+        <EntityTypeShape EntityType="mdlMusicAtout.BATIMENT" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="mdlMusicAtout.SALLE" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="mdlMusicAtout.TYPEOEUVRE" Width="1.5" PointX="7.5" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mdlMusicAtout.VILLE" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <AssociationConnector Association="mdlMusicAtout.FK_BATIMENT_VILLE" ManuallyRouted="false" />
+        <AssociationConnector Association="mdlMusicAtout.FK_SALLE_BATIMENT" ManuallyRouted="false" />
+        <AssociationConnector Association="mdlMusicAtout.ACCUEILLIR" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
