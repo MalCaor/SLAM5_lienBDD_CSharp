@@ -44,11 +44,11 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.vILLEBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.vILLEDataGridView = new System.Windows.Forms.DataGridView();
+            this.vILLEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vILLEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.vILLEBindingNavigator)).BeginInit();
             this.vILLEBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vILLEDataGridView)).BeginInit();
@@ -196,10 +196,14 @@
             this.vILLEDataGridView.TabIndex = 1;
             this.vILLEDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VILLEDataGridView_CellContentClick);
             // 
+            // vILLEBindingSource
+            // 
+            this.vILLEBindingSource.DataSource = typeof(SLAM5_lienBDD_CSharp.VILLE);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "idVille";
-            this.dataGridViewTextBoxColumn1.HeaderText = "idVille";
+            this.dataGridViewTextBoxColumn1.HeaderText = "identifiantVille";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
@@ -219,10 +223,6 @@
             this.dataGridViewTextBoxColumn4.DataPropertyName = "BATIMENT";
             this.dataGridViewTextBoxColumn4.HeaderText = "BATIMENT";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // vILLEBindingSource
-            // 
-            this.vILLEBindingSource.DataSource = typeof(SLAM5_lienBDD_CSharp.VILLE);
             // 
             // FVille
             // 
