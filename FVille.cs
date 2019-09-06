@@ -12,14 +12,11 @@ namespace SLAM5_lienBDD_CSharp
 {
     public partial class FVille : Form
     {
-        private Entities maConnexion;
         public FVille()
         {
             InitializeComponent();
-            /*Instantiation d’un objet de la classe typée chaine de connexion SqlConnection */
-            maConnexion = new Entities();
             /* le  bindingSource  bsVille est connecté à la table Ville de la BDD  via la chaîne de connexion */
-            bsVille.DataSource = maConnexion.VILLE.ToList();
+            bsVille.DataSource = Modele.listeville();
         }
 
         private void VILLEDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

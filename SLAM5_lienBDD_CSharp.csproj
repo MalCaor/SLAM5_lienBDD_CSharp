@@ -72,6 +72,7 @@
     <Compile Include="FVille.Designer.cs">
       <DependentUpon>FVille.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modele.cs" />
     <Compile Include="MusicAtoutV1_LEMEN_Xavier.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
