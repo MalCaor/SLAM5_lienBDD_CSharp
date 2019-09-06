@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FVille));
-            this.vILLEBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bnVille = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -44,24 +44,23 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.vILLEBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.vILLEDataGridView = new System.Windows.Forms.DataGridView();
-            this.vILLEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bsVille = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.vILLEBindingNavigator)).BeginInit();
-            this.vILLEBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bnVille)).BeginInit();
+            this.bnVille.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vILLEDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vILLEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsVille)).BeginInit();
             this.SuspendLayout();
             // 
-            // vILLEBindingNavigator
+            // bnVille
             // 
-            this.vILLEBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.vILLEBindingNavigator.BindingSource = this.vILLEBindingSource;
-            this.vILLEBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.vILLEBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.vILLEBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bnVille.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bnVille.BindingSource = this.bsVille;
+            this.bnVille.CountItem = this.bindingNavigatorCountItem;
+            this.bnVille.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.bnVille.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -74,16 +73,16 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.vILLEBindingNavigatorSaveItem});
-            this.vILLEBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.vILLEBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.vILLEBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.vILLEBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.vILLEBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.vILLEBindingNavigator.Name = "vILLEBindingNavigator";
-            this.vILLEBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.vILLEBindingNavigator.Size = new System.Drawing.Size(800, 25);
-            this.vILLEBindingNavigator.TabIndex = 0;
-            this.vILLEBindingNavigator.Text = "bindingNavigator1";
+            this.bnVille.Location = new System.Drawing.Point(0, 0);
+            this.bnVille.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bnVille.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bnVille.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bnVille.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bnVille.Name = "bnVille";
+            this.bnVille.PositionItem = this.bindingNavigatorPositionItem;
+            this.bnVille.Size = new System.Drawing.Size(800, 25);
+            this.bnVille.TabIndex = 0;
+            this.bnVille.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -112,7 +111,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -187,18 +185,17 @@
             this.vILLEDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.vILLEDataGridView.DataSource = this.vILLEBindingSource;
+            this.dataGridViewTextBoxColumn3});
+            this.vILLEDataGridView.DataSource = this.bsVille;
             this.vILLEDataGridView.Location = new System.Drawing.Point(12, 28);
             this.vILLEDataGridView.Name = "vILLEDataGridView";
             this.vILLEDataGridView.Size = new System.Drawing.Size(788, 421);
             this.vILLEDataGridView.TabIndex = 1;
             this.vILLEDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VILLEDataGridView_CellContentClick);
             // 
-            // vILLEBindingSource
+            // bsVille
             // 
-            this.vILLEBindingSource.DataSource = typeof(SLAM5_lienBDD_CSharp.VILLE);
+            this.bsVille.DataSource = typeof(SLAM5_lienBDD_CSharp.VILLE);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -218,26 +215,22 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "departement";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "BATIMENT";
-            this.dataGridViewTextBoxColumn4.HeaderText = "BATIMENT";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
             // FVille
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.vILLEDataGridView);
-            this.Controls.Add(this.vILLEBindingNavigator);
+            this.Controls.Add(this.bnVille);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "FVille";
             this.Text = "FVille";
-            ((System.ComponentModel.ISupportInitialize)(this.vILLEBindingNavigator)).EndInit();
-            this.vILLEBindingNavigator.ResumeLayout(false);
-            this.vILLEBindingNavigator.PerformLayout();
+            this.TransparencyKey = System.Drawing.Color.White;
+            ((System.ComponentModel.ISupportInitialize)(this.bnVille)).EndInit();
+            this.bnVille.ResumeLayout(false);
+            this.bnVille.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vILLEDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vILLEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsVille)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,8 +238,8 @@
 
         #endregion
 
-        private System.Windows.Forms.BindingSource vILLEBindingSource;
-        private System.Windows.Forms.BindingNavigator vILLEBindingNavigator;
+        private System.Windows.Forms.BindingSource bsVille;
+        private System.Windows.Forms.BindingNavigator bnVille;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -263,6 +256,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }
