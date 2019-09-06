@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SLAM5_lienBDD_CSharp
 {
-    public partial class Form1 : Form
+    public partial class FMenu : Form
     {
-        public Form1()
+        public FMenu()
         {
             InitializeComponent();
         }
