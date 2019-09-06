@@ -15,8 +15,18 @@ namespace SLAM5_lienBDD_CSharp
         public FVille()
         {
             InitializeComponent();
-            /* le  bindingSource  bsVille est connecté à la table Ville de la BDD  via la chaîne de connexion */
+            //les Villes
             bsVille.DataSource = Modele.listeville();
+            dgvsalle.DataSource = bsVille.DataSource;
+            //les Salles
+            bssalle.DataSource = Modele.listesalles();
+            dgvsalle.DataSource = bssalle.DataSource;
+            //les batiments
+            bsbat.DataSource = Modele.listebati();
+            dgvbat.DataSource = bsbat.DataSource;
+            //les oeuvres
+            bstoeuvre.DataSource = Modele.listetypoeuvre();
+            dgvtoeuvre.DataSource = bstoeuvre.DataSource;
         }
 
         private void VILLEDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -19,5 +19,20 @@ namespace SLAM5_lienBDD_CSharp
         {
             return maConnexion.VILLE.ToList();
         }
+
+        public static List<SALLE> listesalles()
+        {
+            return maConnexion.SALLE.ToList();
+        }
+
+        public static List<BATIMENT> listebati()
+        {
+            return maConnexion.BATIMENT.ToList();
+        }
+
+        public static List<TYPEOEUVRE> listetypoeuvre()
+        {
+            return maConnexion.TYPEOEUVRE.ToList();
+        }
     }
 }

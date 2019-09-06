@@ -119,8 +119,11 @@
       <DependentUpon>MusicAtoutV1_LEMEN_Xavier.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BATIMENT.datasource" />
+    <None Include="Properties\DataSources\SALLE.datasource" />
     <None Include="Properties\DataSources\SLAM5_lienBDD_CSharp.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\SLAM5_lienBDD_CSharp.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\TYPEOEUVRE.datasource" />
     <None Include="Properties\DataSources\VILLE.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

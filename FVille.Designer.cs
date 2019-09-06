@@ -43,15 +43,30 @@
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.vILLEBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.vILLEDataGridView = new System.Windows.Forms.DataGridView();
+            this.dgvsalle = new System.Windows.Forms.DataGridView();
+            this.bssalle = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvbat = new System.Windows.Forms.DataGridView();
+            this.bsbat = new System.Windows.Forms.BindingSource(this.components);
             this.bsVille = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sALLEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bATIMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tYPEOEUVREBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvtoeuvre = new System.Windows.Forms.DataGridView();
+            this.bstoeuvre = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvville = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.bnVille)).BeginInit();
             this.bnVille.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vILLEDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvsalle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bssalle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvbat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsbat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsVille)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sALLEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bATIMENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tYPEOEUVREBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvtoeuvre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bstoeuvre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvville)).BeginInit();
             this.SuspendLayout();
             // 
             // bnVille
@@ -80,7 +95,7 @@
             this.bnVille.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bnVille.Name = "bnVille";
             this.bnVille.PositionItem = this.bindingNavigatorPositionItem;
-            this.bnVille.Size = new System.Drawing.Size(800, 25);
+            this.bnVille.Size = new System.Drawing.Size(820, 25);
             this.bnVille.TabIndex = 0;
             this.bnVille.Text = "bindingNavigator1";
             // 
@@ -111,6 +126,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -178,49 +194,71 @@
             this.vILLEBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.vILLEBindingNavigatorSaveItem.Text = "Enregistrer les données";
             // 
-            // vILLEDataGridView
+            // dgvsalle
             // 
-            this.vILLEDataGridView.AutoGenerateColumns = false;
-            this.vILLEDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.vILLEDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.vILLEDataGridView.DataSource = this.bsVille;
-            this.vILLEDataGridView.Location = new System.Drawing.Point(12, 28);
-            this.vILLEDataGridView.Name = "vILLEDataGridView";
-            this.vILLEDataGridView.Size = new System.Drawing.Size(788, 421);
-            this.vILLEDataGridView.TabIndex = 1;
-            this.vILLEDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VILLEDataGridView_CellContentClick);
+            this.dgvsalle.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvsalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvsalle.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvsalle.Location = new System.Drawing.Point(12, 28);
+            this.dgvsalle.Name = "dgvsalle";
+            this.dgvsalle.Size = new System.Drawing.Size(240, 150);
+            this.dgvsalle.TabIndex = 5;
+            // 
+            // dgvbat
+            // 
+            this.dgvbat.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvbat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvbat.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvbat.Location = new System.Drawing.Point(268, 28);
+            this.dgvbat.Name = "dgvbat";
+            this.dgvbat.Size = new System.Drawing.Size(240, 150);
+            this.dgvbat.TabIndex = 6;
             // 
             // bsVille
             // 
             this.bsVille.DataSource = typeof(SLAM5_lienBDD_CSharp.VILLE);
             // 
-            // dataGridViewTextBoxColumn1
+            // sALLEBindingSource
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idVille";
-            this.dataGridViewTextBoxColumn1.HeaderText = "identifiantVille";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.sALLEBindingSource.DataSource = typeof(SLAM5_lienBDD_CSharp.SALLE);
             // 
-            // dataGridViewTextBoxColumn2
+            // bATIMENTBindingSource
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nomVille";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nomVille";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.bATIMENTBindingSource.DataSource = typeof(SLAM5_lienBDD_CSharp.BATIMENT);
             // 
-            // dataGridViewTextBoxColumn3
+            // tYPEOEUVREBindingSource
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "departement";
-            this.dataGridViewTextBoxColumn3.HeaderText = "departement";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.tYPEOEUVREBindingSource.DataSource = typeof(SLAM5_lienBDD_CSharp.TYPEOEUVRE);
+            // 
+            // dgvtoeuvre
+            // 
+            this.dgvtoeuvre.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvtoeuvre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvtoeuvre.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvtoeuvre.Location = new System.Drawing.Point(524, 28);
+            this.dgvtoeuvre.Name = "dgvtoeuvre";
+            this.dgvtoeuvre.Size = new System.Drawing.Size(240, 150);
+            this.dgvtoeuvre.TabIndex = 7;
+            // 
+            // dgvville
+            // 
+            this.dgvville.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvville.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvville.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvville.Location = new System.Drawing.Point(12, 204);
+            this.dgvville.Name = "dgvville";
+            this.dgvville.Size = new System.Drawing.Size(240, 150);
+            this.dgvville.TabIndex = 8;
             // 
             // FVille
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.vILLEDataGridView);
+            this.ClientSize = new System.Drawing.Size(820, 473);
+            this.Controls.Add(this.dgvville);
+            this.Controls.Add(this.dgvtoeuvre);
+            this.Controls.Add(this.dgvbat);
+            this.Controls.Add(this.dgvsalle);
             this.Controls.Add(this.bnVille);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "FVille";
@@ -229,8 +267,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.bnVille)).EndInit();
             this.bnVille.ResumeLayout(false);
             this.bnVille.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vILLEDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvsalle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bssalle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvbat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsbat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsVille)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sALLEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bATIMENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tYPEOEUVREBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvtoeuvre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bstoeuvre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvville)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,9 +299,15 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton vILLEBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView vILLEDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.BindingSource sALLEBindingSource;
+        private System.Windows.Forms.BindingSource bATIMENTBindingSource;
+        private System.Windows.Forms.BindingSource tYPEOEUVREBindingSource;
+        private System.Windows.Forms.DataGridView dgvsalle;
+        private System.Windows.Forms.BindingSource bssalle;
+        private System.Windows.Forms.DataGridView dgvbat;
+        private System.Windows.Forms.BindingSource bsbat;
+        private System.Windows.Forms.DataGridView dgvtoeuvre;
+        private System.Windows.Forms.BindingSource bstoeuvre;
+        private System.Windows.Forms.DataGridView dgvville;
     }
 }
