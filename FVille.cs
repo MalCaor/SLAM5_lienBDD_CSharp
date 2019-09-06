@@ -16,5 +16,10 @@ namespace SLAM5_lienBDD_CSharp
         {
             InitializeComponent();
         }
+
+        private void VILLEDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
