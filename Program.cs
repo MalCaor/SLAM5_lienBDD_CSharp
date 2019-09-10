@@ -19,7 +19,7 @@ namespace SLAM5_lienBDD_CSharp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Modele.init();
-            Application.Run(new FVille());
+            Application.Run(new FMenu());
         }
 
         

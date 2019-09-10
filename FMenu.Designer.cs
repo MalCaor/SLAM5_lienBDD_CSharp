@@ -28,20 +28,88 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.salleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.villeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.batimentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.typeOeuveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salleToolStripMenuItem,
+            this.villeToolStripMenuItem,
+            this.batimentToolStripMenuItem,
+            this.typeOeuveToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(40, 20);
+            this.toolStripMenuItem1.Text = "LIST";
+            // 
+            // salleToolStripMenuItem
+            // 
+            this.salleToolStripMenuItem.Name = "salleToolStripMenuItem";
+            this.salleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salleToolStripMenuItem.Text = "Salle";
+            this.salleToolStripMenuItem.Click += new System.EventHandler(this.SalleToolStripMenuItem_Click);
+            // 
+            // villeToolStripMenuItem
+            // 
+            this.villeToolStripMenuItem.Name = "villeToolStripMenuItem";
+            this.villeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.villeToolStripMenuItem.Text = "Ville";
+            this.villeToolStripMenuItem.Click += new System.EventHandler(this.VilleToolStripMenuItem_Click);
+            // 
+            // batimentToolStripMenuItem
+            // 
+            this.batimentToolStripMenuItem.Name = "batimentToolStripMenuItem";
+            this.batimentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.batimentToolStripMenuItem.Text = "Batiment";
+            this.batimentToolStripMenuItem.Click += new System.EventHandler(this.BatimentToolStripMenuItem_Click);
+            // 
+            // typeOeuveToolStripMenuItem
+            // 
+            this.typeOeuveToolStripMenuItem.Name = "typeOeuveToolStripMenuItem";
+            this.typeOeuveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.typeOeuveToolStripMenuItem.Text = "Type Oeuve";
+            this.typeOeuveToolStripMenuItem.Click += new System.EventHandler(this.TypeOeuveToolStripMenuItem_Click);
             // 
             // FMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FMenu";
             this.Text = "Form1";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem salleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem villeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem batimentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem typeOeuveToolStripMenuItem;
     }
 }
 

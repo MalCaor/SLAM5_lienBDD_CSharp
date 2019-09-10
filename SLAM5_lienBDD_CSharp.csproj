@@ -60,11 +60,29 @@
     <Compile Include="BATIMENT.cs">
       <DependentUpon>MusicAtoutV1_LEMEN_Xavier.tt</DependentUpon>
     </Compile>
+    <Compile Include="FBatiment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBatiment.Designer.cs">
+      <DependentUpon>FBatiment.cs</DependentUpon>
+    </Compile>
     <Compile Include="FMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FMenu.Designer.cs">
       <DependentUpon>FMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSalle.Designer.cs">
+      <DependentUpon>FSalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTypeOeuvre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTypeOeuvre.Designer.cs">
+      <DependentUpon>FTypeOeuvre.cs</DependentUpon>
     </Compile>
     <Compile Include="FVille.cs">
       <SubType>Form</SubType>
@@ -99,8 +117,17 @@
     <Compile Include="VILLE.cs">
       <DependentUpon>MusicAtoutV1_LEMEN_Xavier.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FBatiment.resx">
+      <DependentUpon>FBatiment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FMenu.resx">
       <DependentUpon>FMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSalle.resx">
+      <DependentUpon>FSalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTypeOeuvre.resx">
+      <DependentUpon>FTypeOeuvre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FVille.resx">
       <DependentUpon>FVille.cs</DependentUpon>

@@ -10,19 +10,15 @@ using System.Windows.Forms;
 
 namespace SLAM5_lienBDD_CSharp
 {
-    public partial class FVille : Form
+    public partial class FTypeOeuvre : Form
     {
-        public FVille()
+        public FTypeOeuvre()
         {
             InitializeComponent();
-            //les Villes
-            bsVille.DataSource = Modele.listeville();
-            dgvville.DataSource = bsVille.DataSource;
-        }
-
-        private void VILLEDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            //les Types d'Oeuvre
+            bsto.DataSource = Modele.listetypoeuvre();
+            dgvto.DataSource = bsto.DataSource;
+            dgvto.Columns[2].Visible = false;
         }
     }
 }
