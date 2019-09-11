@@ -12,6 +12,7 @@ namespace SLAM5_lienBDD_CSharp
 {
     public partial class FCompositeurNation : Form
     {
+        static bool close = false;
         public FCompositeurNation()
         {
             InitializeComponent();
@@ -33,14 +34,21 @@ namespace SLAM5_lienBDD_CSharp
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bsComp.DataSource = Modele.CompositeurParNationalite(int.Parse(comboCompNat.SelectedValue.ToString()));
-            dgvComp.DataSource = bsComp;
-            dgvComp.Columns[0].HeaderText = "NOM";
-            dgvComp.Columns[1].HeaderText = "PRENOM";
-            dgvComp.Columns[2].HeaderText = "STYLE";
-            dgvComp.Columns[3].HeaderText = "Né le";
-            dgvComp.Columns[4].HeaderText = "Mort le";
-            dgvComp.Columns[5].HeaderText = "Informations";
+            if (close)
+            {
+
+            }
+            else
+            {
+                bsComp.DataSource = Modele.CompositeurParNationalite(int.Parse(comboCompNat.SelectedValue.ToString()));
+                dgvComp.DataSource = bsComp;
+                dgvComp.Columns[0].HeaderText = "NOM";
+                dgvComp.Columns[1].HeaderText = "PRENOM";
+                dgvComp.Columns[2].HeaderText = "STYLE";
+                dgvComp.Columns[3].HeaderText = "Né le";
+                dgvComp.Columns[4].HeaderText = "Mort le";
+                dgvComp.Columns[5].HeaderText = "Informations";
+            }
         }
 
         private void FCompositeurNation_Load(object sender, EventArgs e)
@@ -49,11 +57,17 @@ namespace SLAM5_lienBDD_CSharp
             comboCompNat.DisplayMember = "libNation";
             bsnat.DataSource = Modele.listenat();
             comboCompNat.DataSource = bsnat;
+            close = false;
         }
 
         private void BindingSource1_CurrentChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void FCompositeurNation_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            close = true;
         }
     }
 }

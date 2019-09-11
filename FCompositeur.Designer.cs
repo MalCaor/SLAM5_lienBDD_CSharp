@@ -89,6 +89,7 @@
             this.Controls.Add(this.dgvComp);
             this.Name = "FCompositeurNation";
             this.Text = "FCompositeurNation";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FCompositeurNation_FormClosing);
             this.Load += new System.EventHandler(this.FCompositeurNation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvComp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsComp)).EndInit();
