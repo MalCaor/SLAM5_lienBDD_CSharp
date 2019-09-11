@@ -29,5 +29,9 @@ namespace SLAM5_lienBDD_CSharp
         public virtual DbSet<SALLE> SALLE { get; set; }
         public virtual DbSet<TYPEOEUVRE> TYPEOEUVRE { get; set; }
         public virtual DbSet<VILLE> VILLE { get; set; }
+        public virtual DbSet<COMPOSITEUR> COMPOSITEUR { get; set; }
+        public virtual DbSet<NATIONALITE> NATIONALITE { get; set; }
+        public virtual DbSet<OEUVRE> OEUVRE { get; set; }
+        public virtual DbSet<STYLE> STYLE { get; set; }
     }
 }

@@ -34,5 +34,10 @@ namespace SLAM5_lienBDD_CSharp
         {
             return maConnexion.TYPEOEUVRE.ToList();
         }
+
+        public static List<COMPOSITEUR> listecomp()
+        {
+            return maConnexion.COMPOSITEUR.ToList();
+        }
     }
 }

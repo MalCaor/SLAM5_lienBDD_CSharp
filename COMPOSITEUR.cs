@@ -12,20 +12,25 @@ namespace SLAM5_lienBDD_CSharp
     using System;
     using System.Collections.Generic;
     
-    public partial class TYPEOEUVRE
+    public partial class COMPOSITEUR
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TYPEOEUVRE()
+        public COMPOSITEUR()
         {
-            this.SALLE = new HashSet<SALLE>();
             this.OEUVRE = new HashSet<OEUVRE>();
         }
     
-        public int idType { get; set; }
-        public string libelleType { get; set; }
+        public int idCompositeur { get; set; }
+        public int idNation { get; set; }
+        public int idStyle { get; set; }
+        public string nomCompositeur { get; set; }
+        public string prenomCompositeur { get; set; }
+        public Nullable<int> anNais { get; set; }
+        public Nullable<int> anMort { get; set; }
+        public string remarque { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SALLE> SALLE { get; set; }
+        public virtual NATIONALITE NATIONALITE { get; set; }
+        public virtual STYLE STYLE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OEUVRE> OEUVRE { get; set; }
     }

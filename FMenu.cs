@@ -40,5 +40,16 @@ namespace SLAM5_lienBDD_CSharp
             Form flesTO = new FTypeOeuvre();
             flesTO.Show();
         }
+
+        private void CompositeurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ParNationalitéToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form flesComps = new FCompositeurNation();
+            flesComps.Show();
+        }
     }
 }

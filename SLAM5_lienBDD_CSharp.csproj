@@ -60,11 +60,20 @@
     <Compile Include="BATIMENT.cs">
       <DependentUpon>MusicAtoutV1_LEMEN_Xavier.tt</DependentUpon>
     </Compile>
+    <Compile Include="COMPOSITEUR.cs">
+      <DependentUpon>MusicAtoutV1_LEMEN_Xavier.tt</DependentUpon>
+    </Compile>
     <Compile Include="FBatiment.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FBatiment.Designer.cs">
       <DependentUpon>FBatiment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCompositeur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCompositeur.Designer.cs">
+      <DependentUpon>FCompositeur.cs</DependentUpon>
     </Compile>
     <Compile Include="FMenu.cs">
       <SubType>Form</SubType>
@@ -106,9 +115,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MusicAtoutV1_LEMEN_Xavier.edmx</DependentUpon>
     </Compile>
+    <Compile Include="NATIONALITE.cs">
+      <DependentUpon>MusicAtoutV1_LEMEN_Xavier.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OEUVRE.cs">
+      <DependentUpon>MusicAtoutV1_LEMEN_Xavier.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SALLE.cs">
+      <DependentUpon>MusicAtoutV1_LEMEN_Xavier.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STYLE.cs">
       <DependentUpon>MusicAtoutV1_LEMEN_Xavier.tt</DependentUpon>
     </Compile>
     <Compile Include="TYPEOEUVRE.cs">
@@ -119,6 +137,9 @@
     </Compile>
     <EmbeddedResource Include="FBatiment.resx">
       <DependentUpon>FBatiment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCompositeur.resx">
+      <DependentUpon>FCompositeur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMenu.resx">
       <DependentUpon>FMenu.cs</DependentUpon>

@@ -12,21 +12,20 @@ namespace SLAM5_lienBDD_CSharp
     using System;
     using System.Collections.Generic;
     
-    public partial class TYPEOEUVRE
+    public partial class STYLE
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TYPEOEUVRE()
+        public STYLE()
         {
-            this.SALLE = new HashSet<SALLE>();
-            this.OEUVRE = new HashSet<OEUVRE>();
+            this.COMPOSITEUR = new HashSet<COMPOSITEUR>();
         }
     
-        public int idType { get; set; }
-        public string libelleType { get; set; }
+        public int idStyle { get; set; }
+        public string libStyle { get; set; }
+        public Nullable<int> dateDebut { get; set; }
+        public Nullable<int> dateFin { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SALLE> SALLE { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OEUVRE> OEUVRE { get; set; }
+        public virtual ICollection<COMPOSITEUR> COMPOSITEUR { get; set; }
     }
 }

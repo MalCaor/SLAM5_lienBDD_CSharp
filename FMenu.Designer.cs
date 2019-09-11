@@ -38,6 +38,8 @@
             this.typeOeuveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.compositeurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parNationalitéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +47,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.compositeurToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -109,6 +112,22 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // compositeurToolStripMenuItem
+            // 
+            this.compositeurToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.parNationalitéToolStripMenuItem});
+            this.compositeurToolStripMenuItem.Name = "compositeurToolStripMenuItem";
+            this.compositeurToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.compositeurToolStripMenuItem.Text = "Compositeur";
+            this.compositeurToolStripMenuItem.Click += new System.EventHandler(this.CompositeurToolStripMenuItem_Click);
+            // 
+            // parNationalitéToolStripMenuItem
+            // 
+            this.parNationalitéToolStripMenuItem.Name = "parNationalitéToolStripMenuItem";
+            this.parNationalitéToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.parNationalitéToolStripMenuItem.Text = "Par nationalité";
+            this.parNationalitéToolStripMenuItem.Click += new System.EventHandler(this.ParNationalitéToolStripMenuItem_Click);
+            // 
             // FMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,6 +156,8 @@
         private System.Windows.Forms.ToolStripMenuItem typeOeuveToolStripMenuItem;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem compositeurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parNationalitéToolStripMenuItem;
     }
 }
 
