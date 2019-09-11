@@ -46,6 +46,12 @@ namespace SLAM5_lienBDD_CSharp
             dgvCompStyle.Columns[3].HeaderText = "Né le";
             dgvCompStyle.Columns[4].HeaderText = "Mort le";
             dgvCompStyle.Columns[5].HeaderText = "Informations";
+            tbdebstyle.Text = v.dateDebut.ToString();
+            tbfinstyle.Text = v.dateFin.ToString();
+        }
+
+        private void TextBox2_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }
