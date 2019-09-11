@@ -36,10 +36,11 @@
             this.villeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.batimentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.typeOeuveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.compositeurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parNationalitéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.parStyleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,30 +70,47 @@
             // salleToolStripMenuItem
             // 
             this.salleToolStripMenuItem.Name = "salleToolStripMenuItem";
-            this.salleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salleToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.salleToolStripMenuItem.Text = "Salle";
             this.salleToolStripMenuItem.Click += new System.EventHandler(this.SalleToolStripMenuItem_Click);
             // 
             // villeToolStripMenuItem
             // 
             this.villeToolStripMenuItem.Name = "villeToolStripMenuItem";
-            this.villeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.villeToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.villeToolStripMenuItem.Text = "Ville";
             this.villeToolStripMenuItem.Click += new System.EventHandler(this.VilleToolStripMenuItem_Click);
             // 
             // batimentToolStripMenuItem
             // 
             this.batimentToolStripMenuItem.Name = "batimentToolStripMenuItem";
-            this.batimentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.batimentToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.batimentToolStripMenuItem.Text = "Batiment";
             this.batimentToolStripMenuItem.Click += new System.EventHandler(this.BatimentToolStripMenuItem_Click);
             // 
             // typeOeuveToolStripMenuItem
             // 
             this.typeOeuveToolStripMenuItem.Name = "typeOeuveToolStripMenuItem";
-            this.typeOeuveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.typeOeuveToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.typeOeuveToolStripMenuItem.Text = "Type Oeuve";
             this.typeOeuveToolStripMenuItem.Click += new System.EventHandler(this.TypeOeuveToolStripMenuItem_Click);
+            // 
+            // compositeurToolStripMenuItem
+            // 
+            this.compositeurToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.parNationalitéToolStripMenuItem,
+            this.parStyleToolStripMenuItem});
+            this.compositeurToolStripMenuItem.Name = "compositeurToolStripMenuItem";
+            this.compositeurToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.compositeurToolStripMenuItem.Text = "Compositeur";
+            this.compositeurToolStripMenuItem.Click += new System.EventHandler(this.CompositeurToolStripMenuItem_Click);
+            // 
+            // parNationalitéToolStripMenuItem
+            // 
+            this.parNationalitéToolStripMenuItem.Name = "parNationalitéToolStripMenuItem";
+            this.parNationalitéToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.parNationalitéToolStripMenuItem.Text = "Par nationalité";
+            this.parNationalitéToolStripMenuItem.Click += new System.EventHandler(this.ParNationalitéToolStripMenuItem_Click);
             // 
             // imageList1
             // 
@@ -112,21 +130,12 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // compositeurToolStripMenuItem
+            // parStyleToolStripMenuItem
             // 
-            this.compositeurToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.parNationalitéToolStripMenuItem});
-            this.compositeurToolStripMenuItem.Name = "compositeurToolStripMenuItem";
-            this.compositeurToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
-            this.compositeurToolStripMenuItem.Text = "Compositeur";
-            this.compositeurToolStripMenuItem.Click += new System.EventHandler(this.CompositeurToolStripMenuItem_Click);
-            // 
-            // parNationalitéToolStripMenuItem
-            // 
-            this.parNationalitéToolStripMenuItem.Name = "parNationalitéToolStripMenuItem";
-            this.parNationalitéToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.parNationalitéToolStripMenuItem.Text = "Par nationalité";
-            this.parNationalitéToolStripMenuItem.Click += new System.EventHandler(this.ParNationalitéToolStripMenuItem_Click);
+            this.parStyleToolStripMenuItem.Name = "parStyleToolStripMenuItem";
+            this.parStyleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.parStyleToolStripMenuItem.Text = "Par Style";
+            this.parStyleToolStripMenuItem.Click += new System.EventHandler(this.ParStyleToolStripMenuItem_Click);
             // 
             // FMenu
             // 
@@ -158,6 +167,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem compositeurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem parNationalitéToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parStyleToolStripMenuItem;
     }
 }
 

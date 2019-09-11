@@ -44,11 +44,24 @@ namespace SLAM5_lienBDD_CSharp
         {
             return maConnexion.NATIONALITE.ToList();
         }
+        public static List<STYLE> listestyle()
+        {
+            return maConnexion.STYLE.ToList();
+        }
 
         public static Object CompositeurParNationalite(int idNation)
         {
             var LQuery = maConnexion.COMPOSITEUR.ToList()
                            .Where(x => x.idNation == idNation)
+                           .Select(x => new { x.nomCompositeur, x.prenomCompositeur, x.STYLE.libStyle, x.anNais, x.anMort, x.remarque })
+                           .OrderBy(x => x.nomCompositeur);
+            return LQuery.ToList();
+
+        }
+        public static Object CompositeurParStyle(int idstyle)
+        {
+            var LQuery = maConnexion.COMPOSITEUR.ToList()
+                           .Where(x => x.idStyle == idstyle)
                            .Select(x => new { x.nomCompositeur, x.prenomCompositeur, x.STYLE.libStyle, x.anNais, x.anMort, x.remarque })
                            .OrderBy(x => x.nomCompositeur);
             return LQuery.ToList();

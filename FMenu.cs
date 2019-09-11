@@ -51,5 +51,11 @@ namespace SLAM5_lienBDD_CSharp
             Form flesComps = new FCompositeurNation();
             flesComps.Show();
         }
+
+        private void ParStyleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form flesStyles = new FCompositeurStyle();
+            flesStyles.Show();
+        }
     }
 }
