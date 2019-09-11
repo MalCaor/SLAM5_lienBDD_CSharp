@@ -25,5 +25,35 @@ namespace SLAM5_lienBDD_CSharp
             dgvComp.Columns[9].Visible = false;
             dgvComp.Columns[10].Visible = false;
         }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bsComp.DataSource = Modele.CompositeurParNationalite(int.Parse(comboCompNat.SelectedValue.ToString()));
+            dgvComp.DataSource = bsComp;
+            dgvComp.Columns[0].HeaderText = "NOM";
+            dgvComp.Columns[1].HeaderText = "PRENOM";
+            dgvComp.Columns[2].HeaderText = "STYLE";
+            dgvComp.Columns[3].HeaderText = "Né le";
+            dgvComp.Columns[4].HeaderText = "Mort le";
+            dgvComp.Columns[5].HeaderText = "Informations";
+        }
+
+        private void FCompositeurNation_Load(object sender, EventArgs e)
+        {
+            comboCompNat.ValueMember = "idNation";//permet de stocker l'identifiant
+            comboCompNat.DisplayMember = "libNation";
+            bsnat.DataSource = Modele.listenat();
+            comboCompNat.DataSource = bsnat;
+        }
+
+        private void BindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

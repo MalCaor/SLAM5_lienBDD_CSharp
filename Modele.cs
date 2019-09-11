@@ -39,5 +39,20 @@ namespace SLAM5_lienBDD_CSharp
         {
             return maConnexion.COMPOSITEUR.ToList();
         }
+
+        public static List<NATIONALITE> listenat()
+        {
+            return maConnexion.NATIONALITE.ToList();
+        }
+
+        public static Object CompositeurParNationalite(int idNation)
+        {
+            var LQuery = maConnexion.COMPOSITEUR.ToList()
+                           .Where(x => x.idNation == idNation)
+                           .Select(x => new { x.nomCompositeur, x.prenomCompositeur, x.STYLE.libStyle, x.anNais, x.anMort, x.remarque })
+                           .OrderBy(x => x.nomCompositeur);
+            return LQuery.ToList();
+
+        }
     }
 }
