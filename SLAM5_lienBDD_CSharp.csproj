@@ -63,6 +63,12 @@
     <Compile Include="COMPOSITEUR.cs">
       <DependentUpon>MusicAtoutV1_LEMEN_Xavier.tt</DependentUpon>
     </Compile>
+    <Compile Include="FAjoutComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAjoutComp.Designer.cs">
+      <DependentUpon>FAjoutComp.cs</DependentUpon>
+    </Compile>
     <Compile Include="FBatiment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,12 +147,21 @@
     <Compile Include="STYLE.cs">
       <DependentUpon>MusicAtoutV1_LEMEN_Xavier.tt</DependentUpon>
     </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
     <Compile Include="TYPEOEUVRE.cs">
       <DependentUpon>MusicAtoutV1_LEMEN_Xavier.tt</DependentUpon>
     </Compile>
     <Compile Include="VILLE.cs">
       <DependentUpon>MusicAtoutV1_LEMEN_Xavier.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FAjoutComp.resx">
+      <DependentUpon>FAjoutComp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FBatiment.resx">
       <DependentUpon>FBatiment.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +196,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="MusicAtoutV1_LEMEN_Xavier.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MusicAtoutV1_LEMEN_Xavier.Designer.cs</LastGenOutput>
@@ -190,6 +208,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BATIMENT.datasource" />
+    <None Include="Properties\DataSources\COMPOSITEUR.datasource" />
     <None Include="Properties\DataSources\SALLE.datasource" />
     <None Include="Properties\DataSources\SLAM5_lienBDD_CSharp.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\SLAM5_lienBDD_CSharp.Properties.Settings.datasource" />

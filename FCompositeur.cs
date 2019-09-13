@@ -81,5 +81,16 @@ namespace SLAM5_lienBDD_CSharp
         {
             close = true;
         }
+
+        private void BsComp_CurrentChanged(object sender, EventArgs e)
+        {
+            //COMPOSITEUR c = (COMPOSITEUR)bsComp.Current;
+        }
+
+        private void BAjout_Click(object sender, EventArgs e)
+        {
+            Form fajout = new FAjoutComp();
+            fajout.ShowDialog();
+        }
     }
 }

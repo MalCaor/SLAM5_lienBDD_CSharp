@@ -30,10 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvComp = new System.Windows.Forms.DataGridView();
-            this.bsComp = new System.Windows.Forms.BindingSource(this.components);
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.comboCompNat = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.bAjout = new System.Windows.Forms.Button();
+            this.bModif = new System.Windows.Forms.Button();
+            this.bSuppr = new System.Windows.Forms.Button();
+            this.bsComp = new System.Windows.Forms.BindingSource(this.components);
             this.bsnat = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvComp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsComp)).BeginInit();
@@ -45,7 +48,7 @@
             this.dgvComp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvComp.Location = new System.Drawing.Point(12, 56);
             this.dgvComp.Name = "dgvComp";
-            this.dgvComp.Size = new System.Drawing.Size(776, 382);
+            this.dgvComp.Size = new System.Drawing.Size(776, 290);
             this.dgvComp.TabIndex = 0;
             // 
             // entityCommand1
@@ -75,6 +78,38 @@
             this.textBox1.Text = "Nationalité";
             this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
+            // bAjout
+            // 
+            this.bAjout.Location = new System.Drawing.Point(13, 372);
+            this.bAjout.Name = "bAjout";
+            this.bAjout.Size = new System.Drawing.Size(75, 23);
+            this.bAjout.TabIndex = 3;
+            this.bAjout.Text = "AJOUT";
+            this.bAjout.UseVisualStyleBackColor = true;
+            this.bAjout.Click += new System.EventHandler(this.BAjout_Click);
+            // 
+            // bModif
+            // 
+            this.bModif.Location = new System.Drawing.Point(94, 372);
+            this.bModif.Name = "bModif";
+            this.bModif.Size = new System.Drawing.Size(109, 23);
+            this.bModif.TabIndex = 4;
+            this.bModif.Text = "MODIFICATION";
+            this.bModif.UseVisualStyleBackColor = true;
+            // 
+            // bSuppr
+            // 
+            this.bSuppr.Location = new System.Drawing.Point(209, 372);
+            this.bSuppr.Name = "bSuppr";
+            this.bSuppr.Size = new System.Drawing.Size(99, 23);
+            this.bSuppr.TabIndex = 5;
+            this.bSuppr.Text = "SUPPRESSION";
+            this.bSuppr.UseVisualStyleBackColor = true;
+            // 
+            // bsComp
+            // 
+            this.bsComp.CurrentChanged += new System.EventHandler(this.BsComp_CurrentChanged);
+            // 
             // bsnat
             // 
             this.bsnat.CurrentChanged += new System.EventHandler(this.BindingSource1_CurrentChanged);
@@ -84,6 +119,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bSuppr);
+            this.Controls.Add(this.bModif);
+            this.Controls.Add(this.bAjout);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboCompNat);
             this.Controls.Add(this.dgvComp);
@@ -107,5 +145,8 @@
         private System.Windows.Forms.ComboBox comboCompNat;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.BindingSource bsnat;
+        private System.Windows.Forms.Button bAjout;
+        private System.Windows.Forms.Button bModif;
+        private System.Windows.Forms.Button bSuppr;
     }
 }
