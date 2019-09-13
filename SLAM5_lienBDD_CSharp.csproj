@@ -153,6 +153,9 @@
     <EmbeddedResource Include="FCompositeur.resx">
       <DependentUpon>FCompositeur.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FCompositeurOeuvre.resx">
+      <DependentUpon>FCompositeurOeuvre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCompositeurStyle.resx">
       <DependentUpon>FCompositeurStyle.cs</DependentUpon>
     </EmbeddedResource>

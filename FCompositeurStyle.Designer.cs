@@ -35,6 +35,7 @@
             this.bscomp = new System.Windows.Forms.BindingSource(this.components);
             this.tbdebstyle = new System.Windows.Forms.TextBox();
             this.tbfinstyle = new System.Windows.Forms.TextBox();
+            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompStyle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsstyle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bscomp)).BeginInit();
@@ -77,6 +78,14 @@
             this.tbfinstyle.TabIndex = 3;
             this.tbfinstyle.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             // 
+            // entityCommand1
+            // 
+            this.entityCommand1.CommandTimeout = 0;
+            this.entityCommand1.CommandTree = null;
+            this.entityCommand1.Connection = null;
+            this.entityCommand1.EnablePlanCaching = true;
+            this.entityCommand1.Transaction = null;
+            // 
             // FCompositeurStyle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,5 +114,6 @@
         private System.Windows.Forms.BindingSource bscomp;
         private System.Windows.Forms.TextBox tbdebstyle;
         private System.Windows.Forms.TextBox tbfinstyle;
+        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
     }
 }

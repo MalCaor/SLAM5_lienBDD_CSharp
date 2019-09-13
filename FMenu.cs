@@ -57,5 +57,11 @@ namespace SLAM5_lienBDD_CSharp
             Form flesStyles = new FCompositeurStyle();
             flesStyles.Show();
         }
+
+        private void ParOeuvreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form flesOeuvres = new FCompositeurOeuvre();
+            flesOeuvres.Show();
+        }
     }
 }
