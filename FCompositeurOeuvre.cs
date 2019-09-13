@@ -21,6 +21,9 @@ namespace SLAM5_lienBDD_CSharp
             dgvCompStyle.Columns[0].Visible = false;
             dgvCompStyle.Columns[1].Visible = false;
             dgvCompStyle.Columns[2].Visible = false;
+            dgvCompStyle.Columns[5].Visible = false;
+            dgvCompStyle.Columns[6].Visible = false;
+            dgvCompStyle.Columns[7].Visible = false;
             dgvCompStyle.Columns[8].Visible = false;
             dgvCompStyle.Columns[9].Visible = false;
             dgvCompStyle.Columns[10].Visible = false;
@@ -53,6 +56,21 @@ namespace SLAM5_lienBDD_CSharp
         private void Label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Bscomp_CurrentChanged(object sender, EventArgs e)
+        {
+            // init type
+            System.Type type = bscomp.Current.GetType();
+            // Affich nom prenom
+            string nom = (string)type.GetProperty("nomCompositeur").GetValue(bscomp.Current, null);
+            string prenom = (string)type.GetProperty("prenomCompositeur").GetValue(bscomp.Current, null);
+            tbVouAveSelec.Text = nom + " " + prenom;
+            // Naissance et mort
+            int naiss = (int)type.GetProperty("anNais").GetValue(bscomp.Current, null);
+            tbNais.Text = String.Concat(naiss);
+            int mort = (int)type.GetProperty("anMort").GetValue(bscomp.Current, null);
+            tbDece.Text = String.Concat(mort);
         }
     }
 }

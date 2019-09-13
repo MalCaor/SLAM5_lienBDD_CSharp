@@ -92,6 +92,10 @@
             // 
             this.bsstyle.CurrentChanged += new System.EventHandler(this.Bsstyle_CurrentChanged);
             // 
+            // bscomp
+            // 
+            this.bscomp.CurrentChanged += new System.EventHandler(this.Bscomp_CurrentChanged);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkRed;
