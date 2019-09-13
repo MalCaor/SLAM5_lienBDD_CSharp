@@ -40,6 +40,9 @@ namespace SLAM5_lienBDD_CSharp
         private void Bsstyle_CurrentChanged(object sender, EventArgs e)
         {
             STYLE v = (STYLE)bsstyle.Current;
+            bscomp.DataSource = v.COMPOSITEUR.ToList();
+            dgvCompStyle.DataSource = bscomp;
+            /*
             int x = v.idStyle;
             bscomp.DataSource = Modele.CompositeurParStyle(int.Parse(x.ToString()));
             dgvCompStyle.DataSource = bscomp;
@@ -49,6 +52,7 @@ namespace SLAM5_lienBDD_CSharp
             dgvCompStyle.Columns[3].HeaderText = "Né le";
             dgvCompStyle.Columns[4].HeaderText = "Mort le";
             dgvCompStyle.Columns[5].HeaderText = "Informations";
+            */
             tbdebstyle.Text = v.dateDebut.ToString();
             tbfinstyle.Text = v.dateFin.ToString();
         }
@@ -60,17 +64,28 @@ namespace SLAM5_lienBDD_CSharp
 
         private void Bscomp_CurrentChanged(object sender, EventArgs e)
         {
-            // init type
-            System.Type type = bscomp.Current.GetType();
-            // Affich nom prenom
-            string nom = (string)type.GetProperty("nomCompositeur").GetValue(bscomp.Current, null);
-            string prenom = (string)type.GetProperty("prenomCompositeur").GetValue(bscomp.Current, null);
+            COMPOSITEUR c = (COMPOSITEUR)bscomp.Current;
+            //le libnation
+            string libnation = c.NATIONALITE.libNation;
+            tbNati.Text = libnation;
+            // la nais et mort
+            int mort = (int)c.anMort;
+            int nais = (int)c.anNais;
+            tbNais.Text = String.Concat(mort);
+            tbDece.Text = String.Concat(nais);
+            // nom prenom
+            string nom = c.nomCompositeur;
+            string prenom = c.prenomCompositeur;
             tbVouAveSelec.Text = nom + " " + prenom;
-            // Naissance et mort
-            int naiss = (int)type.GetProperty("anNais").GetValue(bscomp.Current, null);
-            tbNais.Text = String.Concat(naiss);
-            int mort = (int)type.GetProperty("anMort").GetValue(bscomp.Current, null);
-            tbDece.Text = String.Concat(mort);
+            // Style
+            string style = c.STYLE.libStyle;
+            tbStyle.Text = style;
+            // Remarque
+            string remarque = c.remarque;
+            rtbDesc.Text = remarque;
+            // les Oeuvres
+            bsoeuvre.DataSource = c.OEUVRE.ToList();
+            dgvOeuvre.DataSource = bsoeuvre;
         }
     }
 }

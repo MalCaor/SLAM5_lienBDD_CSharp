@@ -36,24 +36,26 @@
             this.bsstyle = new System.Windows.Forms.BindingSource(this.components);
             this.bscomp = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lVouAveSelec = new System.Windows.Forms.Label();
-            this.tbVouAveSelec = new System.Windows.Forms.TextBox();
-            this.tbNati = new System.Windows.Forms.TextBox();
-            this.lNati = new System.Windows.Forms.Label();
-            this.tbStyle = new System.Windows.Forms.TextBox();
-            this.lStyle = new System.Windows.Forms.Label();
-            this.tbNais = new System.Windows.Forms.TextBox();
-            this.lNais = new System.Windows.Forms.Label();
+            this.dgvOeuvre = new System.Windows.Forms.DataGridView();
+            this.lOeuvreComp = new System.Windows.Forms.Label();
+            this.rtbDesc = new System.Windows.Forms.RichTextBox();
             this.tbDece = new System.Windows.Forms.TextBox();
             this.lDece = new System.Windows.Forms.Label();
-            this.rtbDesc = new System.Windows.Forms.RichTextBox();
-            this.lOeuvreComp = new System.Windows.Forms.Label();
-            this.dgvOeuvre = new System.Windows.Forms.DataGridView();
+            this.tbNais = new System.Windows.Forms.TextBox();
+            this.lNais = new System.Windows.Forms.Label();
+            this.tbStyle = new System.Windows.Forms.TextBox();
+            this.lStyle = new System.Windows.Forms.Label();
+            this.tbNati = new System.Windows.Forms.TextBox();
+            this.lNati = new System.Windows.Forms.Label();
+            this.tbVouAveSelec = new System.Windows.Forms.TextBox();
+            this.lVouAveSelec = new System.Windows.Forms.Label();
+            this.bsoeuvre = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompStyle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsstyle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bscomp)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOeuvre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoeuvre)).BeginInit();
             this.SuspendLayout();
             // 
             // comboStyle
@@ -117,70 +119,30 @@
             this.panel1.Size = new System.Drawing.Size(430, 426);
             this.panel1.TabIndex = 7;
             // 
-            // lVouAveSelec
+            // dgvOeuvre
             // 
-            this.lVouAveSelec.AutoSize = true;
-            this.lVouAveSelec.Location = new System.Drawing.Point(4, 7);
-            this.lVouAveSelec.Name = "lVouAveSelec";
-            this.lVouAveSelec.Size = new System.Drawing.Size(114, 13);
-            this.lVouAveSelec.TabIndex = 0;
-            this.lVouAveSelec.Text = "Vous avez séléctionné";
-            this.lVouAveSelec.Click += new System.EventHandler(this.Label1_Click);
+            this.dgvOeuvre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOeuvre.Location = new System.Drawing.Point(7, 213);
+            this.dgvOeuvre.Name = "dgvOeuvre";
+            this.dgvOeuvre.Size = new System.Drawing.Size(413, 210);
+            this.dgvOeuvre.TabIndex = 12;
             // 
-            // tbVouAveSelec
+            // lOeuvreComp
             // 
-            this.tbVouAveSelec.Location = new System.Drawing.Point(124, 4);
-            this.tbVouAveSelec.Name = "tbVouAveSelec";
-            this.tbVouAveSelec.Size = new System.Drawing.Size(296, 20);
-            this.tbVouAveSelec.TabIndex = 1;
+            this.lOeuvreComp.AutoSize = true;
+            this.lOeuvreComp.Location = new System.Drawing.Point(4, 197);
+            this.lOeuvreComp.Name = "lOeuvreComp";
+            this.lOeuvreComp.Size = new System.Drawing.Size(155, 13);
+            this.lOeuvreComp.TabIndex = 11;
+            this.lOeuvreComp.Text = "Les oeuvres de ce compositeur";
             // 
-            // tbNati
+            // rtbDesc
             // 
-            this.tbNati.Location = new System.Drawing.Point(124, 31);
-            this.tbNati.Name = "tbNati";
-            this.tbNati.Size = new System.Drawing.Size(100, 20);
-            this.tbNati.TabIndex = 3;
-            // 
-            // lNati
-            // 
-            this.lNati.AutoSize = true;
-            this.lNati.Location = new System.Drawing.Point(4, 34);
-            this.lNati.Name = "lNati";
-            this.lNati.Size = new System.Drawing.Size(57, 13);
-            this.lNati.TabIndex = 2;
-            this.lNati.Text = "Nationalité";
-            // 
-            // tbStyle
-            // 
-            this.tbStyle.Location = new System.Drawing.Point(320, 31);
-            this.tbStyle.Name = "tbStyle";
-            this.tbStyle.Size = new System.Drawing.Size(100, 20);
-            this.tbStyle.TabIndex = 5;
-            // 
-            // lStyle
-            // 
-            this.lStyle.AutoSize = true;
-            this.lStyle.Location = new System.Drawing.Point(247, 34);
-            this.lStyle.Name = "lStyle";
-            this.lStyle.Size = new System.Drawing.Size(30, 13);
-            this.lStyle.TabIndex = 4;
-            this.lStyle.Text = "Style";
-            // 
-            // tbNais
-            // 
-            this.tbNais.Location = new System.Drawing.Point(124, 61);
-            this.tbNais.Name = "tbNais";
-            this.tbNais.Size = new System.Drawing.Size(45, 20);
-            this.tbNais.TabIndex = 7;
-            // 
-            // lNais
-            // 
-            this.lNais.AutoSize = true;
-            this.lNais.Location = new System.Drawing.Point(4, 64);
-            this.lNais.Name = "lNais";
-            this.lNais.Size = new System.Drawing.Size(57, 13);
-            this.lNais.TabIndex = 6;
-            this.lNais.Text = "Naissance";
+            this.rtbDesc.Location = new System.Drawing.Point(7, 87);
+            this.rtbDesc.Name = "rtbDesc";
+            this.rtbDesc.Size = new System.Drawing.Size(413, 96);
+            this.rtbDesc.TabIndex = 10;
+            this.rtbDesc.Text = "";
             // 
             // tbDece
             // 
@@ -198,30 +160,70 @@
             this.lDece.TabIndex = 8;
             this.lDece.Text = "Décès";
             // 
-            // rtbDesc
+            // tbNais
             // 
-            this.rtbDesc.Location = new System.Drawing.Point(7, 87);
-            this.rtbDesc.Name = "rtbDesc";
-            this.rtbDesc.Size = new System.Drawing.Size(413, 96);
-            this.rtbDesc.TabIndex = 10;
-            this.rtbDesc.Text = "";
+            this.tbNais.Location = new System.Drawing.Point(124, 61);
+            this.tbNais.Name = "tbNais";
+            this.tbNais.Size = new System.Drawing.Size(45, 20);
+            this.tbNais.TabIndex = 7;
             // 
-            // lOeuvreComp
+            // lNais
             // 
-            this.lOeuvreComp.AutoSize = true;
-            this.lOeuvreComp.Location = new System.Drawing.Point(4, 197);
-            this.lOeuvreComp.Name = "lOeuvreComp";
-            this.lOeuvreComp.Size = new System.Drawing.Size(155, 13);
-            this.lOeuvreComp.TabIndex = 11;
-            this.lOeuvreComp.Text = "Les oeuvres de ce compositeur";
+            this.lNais.AutoSize = true;
+            this.lNais.Location = new System.Drawing.Point(4, 64);
+            this.lNais.Name = "lNais";
+            this.lNais.Size = new System.Drawing.Size(57, 13);
+            this.lNais.TabIndex = 6;
+            this.lNais.Text = "Naissance";
             // 
-            // dgvOeuvre
+            // tbStyle
             // 
-            this.dgvOeuvre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOeuvre.Location = new System.Drawing.Point(7, 213);
-            this.dgvOeuvre.Name = "dgvOeuvre";
-            this.dgvOeuvre.Size = new System.Drawing.Size(413, 210);
-            this.dgvOeuvre.TabIndex = 12;
+            this.tbStyle.Location = new System.Drawing.Point(320, 31);
+            this.tbStyle.Name = "tbStyle";
+            this.tbStyle.Size = new System.Drawing.Size(100, 20);
+            this.tbStyle.TabIndex = 5;
+            // 
+            // lStyle
+            // 
+            this.lStyle.AutoSize = true;
+            this.lStyle.Location = new System.Drawing.Point(247, 34);
+            this.lStyle.Name = "lStyle";
+            this.lStyle.Size = new System.Drawing.Size(30, 13);
+            this.lStyle.TabIndex = 4;
+            this.lStyle.Text = "Style";
+            // 
+            // tbNati
+            // 
+            this.tbNati.Location = new System.Drawing.Point(124, 31);
+            this.tbNati.Name = "tbNati";
+            this.tbNati.Size = new System.Drawing.Size(100, 20);
+            this.tbNati.TabIndex = 3;
+            // 
+            // lNati
+            // 
+            this.lNati.AutoSize = true;
+            this.lNati.Location = new System.Drawing.Point(4, 34);
+            this.lNati.Name = "lNati";
+            this.lNati.Size = new System.Drawing.Size(57, 13);
+            this.lNati.TabIndex = 2;
+            this.lNati.Text = "Nationalité";
+            // 
+            // tbVouAveSelec
+            // 
+            this.tbVouAveSelec.Location = new System.Drawing.Point(124, 4);
+            this.tbVouAveSelec.Name = "tbVouAveSelec";
+            this.tbVouAveSelec.Size = new System.Drawing.Size(296, 20);
+            this.tbVouAveSelec.TabIndex = 1;
+            // 
+            // lVouAveSelec
+            // 
+            this.lVouAveSelec.AutoSize = true;
+            this.lVouAveSelec.Location = new System.Drawing.Point(4, 7);
+            this.lVouAveSelec.Name = "lVouAveSelec";
+            this.lVouAveSelec.Size = new System.Drawing.Size(114, 13);
+            this.lVouAveSelec.TabIndex = 0;
+            this.lVouAveSelec.Text = "Vous avez séléctionné";
+            this.lVouAveSelec.Click += new System.EventHandler(this.Label1_Click);
             // 
             // FCompositeurOeuvre
             // 
@@ -242,6 +244,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOeuvre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsoeuvre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,5 +272,6 @@
         private System.Windows.Forms.TextBox tbNati;
         private System.Windows.Forms.Label lNati;
         private System.Windows.Forms.TextBox tbVouAveSelec;
+        private System.Windows.Forms.BindingSource bsoeuvre;
     }
 }
