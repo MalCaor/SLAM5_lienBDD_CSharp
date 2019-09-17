@@ -46,8 +46,8 @@ namespace SLAM5_lienBDD_CSharp
                 string remarque = rtbRemarque.Text;
                 int anmort = int.Parse(tbmort.Text);
                 int annais = int.Parse(tbnais.Text);
-                NATIONALITE nati = (NATIONALITE)cbnat.SelectedItem;
-                STYLE style = (STYLE)cbstyle.SelectedItem;
+                int nati = ((NATIONALITE)bsnat.Current).idNation;
+                int style = ((STYLE)bsstyle.Current).idStyle;
                 // Crée Comp
                 COMPOSITEUR newComp = new COMPOSITEUR();
                 newComp.nomCompositeur = nom;
@@ -55,8 +55,9 @@ namespace SLAM5_lienBDD_CSharp
                 newComp.remarque = remarque;
                 newComp.anMort = anmort;
                 newComp.anNais = annais;
-                newComp.NATIONALITE = nati;
-                newComp.STYLE = style;
+                newComp.idNation = nati;
+                newComp.idStyle = style;
+                Modele.ajoutCompo(newComp);
                 //Messagebox
                 MessageBox.Show("Compositeur Crée");
             }

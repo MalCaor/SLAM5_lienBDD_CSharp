@@ -67,5 +67,10 @@ namespace SLAM5_lienBDD_CSharp
             return LQuery.ToList();
 
         }
+        public static void ajoutCompo(COMPOSITEUR c)
+        {
+            maConnexion.COMPOSITEUR.Add(c);
+            maConnexion.SaveChanges();
+        }
     }
 }
