@@ -19,6 +19,7 @@ namespace SLAM5_lienBDD_CSharp
 
         private void FAjoutComp_Load(object sender, EventArgs e)
         {
+            COMPOSITEUR comptemp = Modele.lecompoChoisi;
             // Les Styles
             cbstyle.ValueMember = "idStyle";//permet de stocker l'identifiant
             cbstyle.DisplayMember = "libStyle";
@@ -30,11 +31,11 @@ namespace SLAM5_lienBDD_CSharp
             bsnat.DataSource = Modele.listenat();
             cbnat.DataSource = bsnat;
             // Les infos
-            tbnom.Text = Modele.lecompoChoisi.nomCompositeur;
-            tbprenom.Text = Modele.lecompoChoisi.prenomCompositeur;
-            tbmort.Text = (Modele.lecompoChoisi.anMort).ToString();
-            tbnais.Text = (Modele.lecompoChoisi.anNais).ToString();
-            rtbRemarque.Text = (Modele.lecompoChoisi.remarque).ToString();
+            tbnom.Text = comptemp.nomCompositeur;
+            tbprenom.Text = comptemp.prenomCompositeur;
+            tbmort.Text = (comptemp.anMort).ToString();
+            tbnais.Text = (comptemp.anNais).ToString();
+            rtbRemarque.Text = (comptemp.remarque).ToString();
         }
 
         private void Tbnom_TextChanged(object sender, EventArgs e)
