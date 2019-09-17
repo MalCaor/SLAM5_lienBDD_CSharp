@@ -92,5 +92,11 @@ namespace SLAM5_lienBDD_CSharp
             Form fajout = new FAjoutComp();
             fajout.ShowDialog();
         }
+
+        private void BModif_Click(object sender, EventArgs e)
+        {
+            Form fmodif = new FModifComp();
+            fmodif.ShowDialog();
+        }
     }
 }

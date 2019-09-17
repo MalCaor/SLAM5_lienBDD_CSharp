@@ -96,6 +96,7 @@
             this.bModif.TabIndex = 4;
             this.bModif.Text = "MODIFICATION";
             this.bModif.UseVisualStyleBackColor = true;
+            this.bModif.Click += new System.EventHandler(this.BModif_Click);
             // 
             // bSuppr
             // 
