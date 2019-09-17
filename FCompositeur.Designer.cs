@@ -50,6 +50,7 @@
             this.dgvComp.Name = "dgvComp";
             this.dgvComp.Size = new System.Drawing.Size(776, 290);
             this.dgvComp.TabIndex = 0;
+            this.dgvComp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvComp_CellContentClick);
             // 
             // entityCommand1
             // 

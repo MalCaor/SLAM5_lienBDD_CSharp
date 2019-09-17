@@ -97,6 +97,14 @@ namespace SLAM5_lienBDD_CSharp
         {
             Form fmodif = new FModifComp();
             fmodif.ShowDialog();
+            System.Type type = bsComp.Current.GetType();
+            var id = (int)type.GetProperty("idCompositeur").GetValue(bsComp.Current, null);
+            Modele.trouveCompositeurId(id);
+        }
+
+        private void DgvComp_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

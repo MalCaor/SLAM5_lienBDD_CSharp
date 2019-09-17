@@ -9,6 +9,15 @@ namespace SLAM5_lienBDD_CSharp
     public static class Modele
     {
         private static Entities maConnexion;
+        private static COMPOSITEUR lecompoChoisi;
+
+        public static void trouveCompositeurId(int id)
+        {
+            var LQuery = maConnexion.COMPOSITEUR.ToList()
+                           .Where(x => x.idCompositeur==id);
+
+            lecompoChoisi = (COMPOSITEUR) LQuery.ToList().First();
+        }
 
         public static void init()
         {
