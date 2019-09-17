@@ -29,6 +29,27 @@ namespace SLAM5_lienBDD_CSharp
             cbnat.DisplayMember = "libNation";
             bsnat.DataSource = Modele.listenat();
             cbnat.DataSource = bsnat;
+            // Les infos
+            tbnom.Text = Modele.lecompoChoisi.nomCompositeur;
+            tbprenom.Text = Modele.lecompoChoisi.prenomCompositeur;
+            tbmort.Text = (Modele.lecompoChoisi.anMort).ToString();
+            tbnais.Text = (Modele.lecompoChoisi.anNais).ToString();
+            rtbRemarque.Text = (Modele.lecompoChoisi.remarque).ToString();
+        }
+
+        private void Tbnom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BOk_Click(object sender, EventArgs e)
+        {
+            // appli Modif
+            Modele.lecompoChoisi.anMort = int.Parse(tbmort.Text);
+            Modele.lecompoChoisi.anNais = int.Parse(tbnais.Text);
+            Modele.lecompoChoisi.remarque = rtbRemarque.Text;
+            Modele.lecompoChoisi.nomCompositeur = tbnom.Text;
+            Modele.lecompoChoisi.prenomCompositeur = tbprenom.Text;
         }
     }
 }

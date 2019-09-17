@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bsstyle = new System.Windows.Forms.BindingSource(this.components);
-            this.bsnat = new System.Windows.Forms.BindingSource(this.components);
             this.bCancel = new System.Windows.Forms.Button();
             this.bOk = new System.Windows.Forms.Button();
             this.cbstyle = new System.Windows.Forms.ComboBox();
@@ -47,6 +45,8 @@
             this.lpre = new System.Windows.Forms.Label();
             this.tbnom = new System.Windows.Forms.TextBox();
             this.lnom = new System.Windows.Forms.Label();
+            this.bsstyle = new System.Windows.Forms.BindingSource(this.components);
+            this.bsnat = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bsstyle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsnat)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +69,7 @@
             this.bOk.TabIndex = 30;
             this.bOk.Text = "OK";
             this.bOk.UseVisualStyleBackColor = true;
+            this.bOk.Click += new System.EventHandler(this.BOk_Click);
             // 
             // cbstyle
             // 
@@ -175,6 +176,7 @@
             this.tbnom.Name = "tbnom";
             this.tbnom.Size = new System.Drawing.Size(100, 20);
             this.tbnom.TabIndex = 17;
+            this.tbnom.TextChanged += new System.EventHandler(this.Tbnom_TextChanged);
             // 
             // lnom
             // 

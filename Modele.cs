@@ -9,7 +9,7 @@ namespace SLAM5_lienBDD_CSharp
     public static class Modele
     {
         private static Entities maConnexion;
-        private static COMPOSITEUR lecompoChoisi;
+        public static COMPOSITEUR lecompoChoisi;
 
         public static void trouveCompositeurId(int id)
         {
