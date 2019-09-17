@@ -210,6 +210,7 @@
             this.Controls.Add(this.lnom);
             this.Name = "FModifComp";
             this.Text = "FModifComp";
+            this.Load += new System.EventHandler(this.FAjoutComp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsstyle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsnat)).EndInit();
             this.ResumeLayout(false);

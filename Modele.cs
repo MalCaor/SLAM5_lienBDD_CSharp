@@ -62,7 +62,7 @@ namespace SLAM5_lienBDD_CSharp
         {
             var LQuery = maConnexion.COMPOSITEUR.ToList()
                            .Where(x => x.idNation == idNation)
-                           .Select(x => new { x.nomCompositeur, x.prenomCompositeur, x.STYLE.libStyle, x.anNais, x.anMort, x.remarque })
+                           .Select(x => new { x.nomCompositeur, x.prenomCompositeur, x.STYLE.libStyle, x.anNais, x.anMort, x.remarque,x.idCompositeur })
                            .OrderBy(x => x.nomCompositeur);
             return LQuery.ToList();
 

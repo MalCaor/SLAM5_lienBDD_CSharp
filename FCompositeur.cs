@@ -95,11 +95,12 @@ namespace SLAM5_lienBDD_CSharp
 
         private void BModif_Click(object sender, EventArgs e)
         {
-            Form fmodif = new FModifComp();
-            fmodif.ShowDialog();
+            
             System.Type type = bsComp.Current.GetType();
             var id = (int)type.GetProperty("idCompositeur").GetValue(bsComp.Current, null);
             Modele.trouveCompositeurId(id);
+            Form fmodif = new FModifComp();
+            fmodif.ShowDialog();
         }
 
         private void DgvComp_CellContentClick(object sender, DataGridViewCellEventArgs e)
