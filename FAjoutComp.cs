@@ -12,6 +12,7 @@ namespace SLAM5_lienBDD_CSharp
 {
     public partial class FAjoutComp : Form
     {
+        private string msgErreur;
         public FAjoutComp()
         {
             InitializeComponent();
@@ -36,7 +37,7 @@ namespace SLAM5_lienBDD_CSharp
             // Verif
             if (Control() == false)
             {
-                MessageBox.Show("erreur");
+                MessageBox.Show(msgErreur,"Attention");
             }
             else
             {
@@ -66,11 +67,40 @@ namespace SLAM5_lienBDD_CSharp
 
         private bool Control()
         {
-            if ((string)tbnom.Text == "" && (string)tbprenom.Text == "" && (string)rtbRemarque.Text == "" && int.Parse(tbmort.Text) <= int.Parse(tbnais.Text))
+            msgErreur = "Erreur de saisie :\n";
+            bool vretour = true;
+            if(tbnom.Text.Length<1)
             {
-                return false;
+                msgErreur+="\t\u25C9\tNom Compositeur non valide\n";
+                vretour = false;
             }
-            return true;
+            if (tbprenom.Text.Length < 1)
+            {
+                msgErreur += "\t\u25C9\tPrenom Compositeur non valide\n";
+                vretour = false;
+            }
+            if (tbmort.Text.Length < 1)
+            {
+                msgErreur += "\t\u25C9\tDate mort Compositeur non valide\n";
+                vretour = false;
+            }
+            if (tbnais.Text.Length < 1)
+            {
+                msgErreur += "\t\u25C9\tDate nais Compositeur non valide\n";
+                vretour = false;
+            }
+            if (rtbRemarque.Text.Length < 1)
+            {
+                msgErreur += "\t\u25C9\tRemarque Compositeur non valide\n";
+                vretour = false;
+            }
+            if (int.Parse(tbmort.Text)<int.Parse(tbnais.Text))
+            {
+                msgErreur += "\t\u25C9\tLe Compositeur est mort avant d'être né\n";
+                vretour = false;
+            }
+
+            return vretour;
         }
 
         private void BCancel_Click(object sender, EventArgs e)

@@ -23,12 +23,12 @@ namespace SLAM5_lienBDD_CSharp
             // Les Styles
             cbstyle.ValueMember = "idStyle";//permet de stocker l'identifiant
             cbstyle.DisplayMember = "libStyle";
-            bsstyle.DataSource = Modele.listestyle();
+            bsstyle.DataSource = comptemp.STYLE;
             cbstyle.DataSource = bsstyle;
             // Les Nations
             cbnat.ValueMember = "idNation";//permet de stocker l'identifiant
             cbnat.DisplayMember = "libNation";
-            bsnat.DataSource = Modele.listenat();
+            bsnat.DataSource = comptemp.NATIONALITE;
             cbnat.DataSource = bsnat;
             // Les infos
             tbnom.Text = comptemp.nomCompositeur;
