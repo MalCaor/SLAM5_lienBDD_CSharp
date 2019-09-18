@@ -91,6 +91,8 @@ namespace SLAM5_lienBDD_CSharp
         {
             Form fajout = new FAjoutComp();
             fajout.ShowDialog();
+           
+
         }
 
         private void BModif_Click(object sender, EventArgs e)
@@ -114,6 +116,13 @@ namespace SLAM5_lienBDD_CSharp
             var id = (int)type.GetProperty("idCompositeur").GetValue(bsComp.Current, null);
             Modele.SupprCompparID(id);
             MessageBox.Show("Comp Supprimé");
+        }
+
+        private void FCompositeurNation_Activated(object sender, EventArgs e)
+        {
+            NATIONALITE vcurrent = (NATIONALITE)bsnat.Current;
+            bsnat.MoveFirst(); bsnat.MoveLast();
+            comboCompNat.Text = vcurrent.libNation;
         }
     }
 }
