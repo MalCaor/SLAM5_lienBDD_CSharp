@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace SLAM5_lienBDD_CSharp
 {
@@ -91,6 +92,30 @@ namespace SLAM5_lienBDD_CSharp
         public static void savechange()
         {
             maConnexion.SaveChanges();
+        }
+
+        public static bool verifLogin(string ID, string MDP)
+        {
+            var MDPCry = "0x" + GetMd5Hash(MDP);
+            foreach (UTILISATEUR util in maConnexion.UTILISATEUR)
+            {
+                if(ID == util.idUtilisateur && MDPCry == util.passwd)
+                {
+                    return true;
+                } 
+            }
+            return false;
+        }
+        private static string GetMd5Hash(string PasswdSaisi)
+        {
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(PasswdSaisi);
+            byte[] hash = (MD5.Create()).ComputeHash(inputBytes);
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hash.Length; i++)
+            {
+                sb.Append(hash[i].ToString("x2"));
+            }
+            return sb.ToString();
         }
     }
 }

@@ -86,6 +86,16 @@
           <Property Name="idType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="libelleType" Type="varchar" MaxLength="64" />
         </EntityType>
+        <EntityType Name="UTILISATEUR">
+          <Key>
+            <PropertyRef Name="idUtilisateur" />
+          </Key>
+          <Property Name="idUtilisateur" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="passwd" Type="varchar" MaxLength="100" />
+          <Property Name="droits" Type="int" />
+          <Property Name="actif" Type="bit" />
+          <Property Name="nbessais" Type="int" />
+        </EntityType>
         <EntityType Name="VILLE">
           <Key>
             <PropertyRef Name="idVille" />
@@ -201,6 +211,7 @@
           <EntitySet Name="SALLE" EntityType="Self.SALLE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="STYLE" EntityType="Self.STYLE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TYPEOEUVRE" EntityType="Self.TYPEOEUVRE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UTILISATEUR" EntityType="Self.UTILISATEUR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VILLE" EntityType="Self.VILLE" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_BATIMENT_VILLE" Association="Self.FK_BATIMENT_VILLE">
             <End Role="VILLE" EntitySet="VILLE" />
@@ -350,6 +361,7 @@
             <End Role="TYPEOEUVRE" EntitySet="TYPEOEUVRE" />
             <End Role="OEUVRE" EntitySet="OEUVRE" />
           </AssociationSet>
+          <EntitySet Name="UTILISATEUR" EntityType="mdlMusicAtout.UTILISATEUR" />
         </EntityContainer>
         <EntityType Name="COMPOSITEUR">
           <Key>
@@ -446,6 +458,16 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="UTILISATEUR">
+          <Key>
+            <PropertyRef Name="idUtilisateur" />
+          </Key>
+          <Property Name="idUtilisateur" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="passwd" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="droits" Type="Int32" />
+          <Property Name="actif" Type="Boolean" />
+          <Property Name="nbessais" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -544,6 +566,17 @@
                 <ScalarProperty Name="dateDebut" ColumnName="dateDebut" />
                 <ScalarProperty Name="libStyle" ColumnName="libStyle" />
                 <ScalarProperty Name="idStyle" ColumnName="idStyle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UTILISATEUR">
+            <EntityTypeMapping TypeName="mdlMusicAtout.UTILISATEUR">
+              <MappingFragment StoreEntitySet="UTILISATEUR">
+                <ScalarProperty Name="nbessais" ColumnName="nbessais" />
+                <ScalarProperty Name="actif" ColumnName="actif" />
+                <ScalarProperty Name="droits" ColumnName="droits" />
+                <ScalarProperty Name="passwd" ColumnName="passwd" />
+                <ScalarProperty Name="idUtilisateur" ColumnName="idUtilisateur" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

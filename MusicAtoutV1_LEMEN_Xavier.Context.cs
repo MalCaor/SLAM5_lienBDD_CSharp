@@ -33,5 +33,6 @@ namespace SLAM5_lienBDD_CSharp
         public virtual DbSet<NATIONALITE> NATIONALITE { get; set; }
         public virtual DbSet<OEUVRE> OEUVRE { get; set; }
         public virtual DbSet<STYLE> STYLE { get; set; }
+        public virtual DbSet<UTILISATEUR> UTILISATEUR { get; set; }
     }
 }
