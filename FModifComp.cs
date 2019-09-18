@@ -51,6 +51,7 @@ namespace SLAM5_lienBDD_CSharp
             Modele.lecompoChoisi.remarque = rtbRemarque.Text;
             Modele.lecompoChoisi.nomCompositeur = tbnom.Text;
             Modele.lecompoChoisi.prenomCompositeur = tbprenom.Text;
+            Modele.savechange();
 
             MessageBox.Show("Coucou c'est modifié ^^");
         }

@@ -107,5 +107,12 @@ namespace SLAM5_lienBDD_CSharp
         {
 
         }
+
+        private void BSuppr_Click(object sender, EventArgs e)
+        {
+            System.Type type = bsComp.Current.GetType();
+            var id = (int)type.GetProperty("idCompositeur").GetValue(bsComp.Current, null);
+            Modele.SupprCompparID(id);
+        }
     }
 }

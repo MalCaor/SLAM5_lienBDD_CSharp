@@ -107,6 +107,7 @@
             this.bSuppr.TabIndex = 5;
             this.bSuppr.Text = "SUPPRESSION";
             this.bSuppr.UseVisualStyleBackColor = true;
+            this.bSuppr.Click += new System.EventHandler(this.BSuppr_Click);
             // 
             // bsComp
             // 

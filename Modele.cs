@@ -81,5 +81,16 @@ namespace SLAM5_lienBDD_CSharp
             maConnexion.COMPOSITEUR.Add(c);
             maConnexion.SaveChanges();
         }
+
+        public static void SupprCompparID(int ID)
+        {
+            maConnexion.COMPOSITEUR.Remove(maConnexion.COMPOSITEUR.Find(ID));
+            maConnexion.SaveChanges();
+        }
+
+        public static void savechange()
+        {
+            maConnexion.SaveChanges();
+        }
     }
 }
