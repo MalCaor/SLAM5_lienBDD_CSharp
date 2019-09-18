@@ -45,6 +45,7 @@ namespace SLAM5_lienBDD_CSharp
 
         private void BOk_Click(object sender, EventArgs e)
         {
+            this.DialogResult = System.Windows.Forms.DialogResult.None;
             // appli Modif
             Modele.lecompoChoisi.anMort = int.Parse(tbmort.Text);
             Modele.lecompoChoisi.anNais = int.Parse(tbnais.Text);
@@ -54,6 +55,7 @@ namespace SLAM5_lienBDD_CSharp
             Modele.savechange();
 
             MessageBox.Show("Coucou c'est modifié ^^");
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
     }
 }

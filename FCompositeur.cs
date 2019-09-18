@@ -113,6 +113,7 @@ namespace SLAM5_lienBDD_CSharp
             System.Type type = bsComp.Current.GetType();
             var id = (int)type.GetProperty("idCompositeur").GetValue(bsComp.Current, null);
             Modele.SupprCompparID(id);
+            MessageBox.Show("Comp Supprimé");
         }
     }
 }

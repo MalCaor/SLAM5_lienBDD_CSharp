@@ -34,6 +34,7 @@ namespace SLAM5_lienBDD_CSharp
 
         private void BOk_Click(object sender, EventArgs e)
         {
+            this.DialogResult = System.Windows.Forms.DialogResult.None;
             // Verif
             if (Control() == false)
             {
@@ -61,6 +62,7 @@ namespace SLAM5_lienBDD_CSharp
                 Modele.ajoutCompo(newComp);
                 //Messagebox
                 MessageBox.Show("Compositeur Crée");
+                this.DialogResult = System.Windows.Forms.DialogResult.OK;
             }
             
         }
@@ -69,6 +71,7 @@ namespace SLAM5_lienBDD_CSharp
         {
             msgErreur = "Erreur de saisie :\n";
             bool vretour = true;
+            int verifmortsupnais = 0;
             if(tbnom.Text.Length<1)
             {
                 msgErreur+="\t\u25C9\tNom Compositeur non valide\n";
@@ -89,17 +92,28 @@ namespace SLAM5_lienBDD_CSharp
                 msgErreur += "\t\u25C9\tDate nais Compositeur non valide\n";
                 vretour = false;
             }
+            else
+            {
+                verifmortsupnais++;
+            }
             if (rtbRemarque.Text.Length < 1)
             {
                 msgErreur += "\t\u25C9\tRemarque Compositeur non valide\n";
                 vretour = false;
             }
-            if (int.Parse(tbmort.Text)<int.Parse(tbnais.Text))
+            else
             {
-                msgErreur += "\t\u25C9\tLe Compositeur est mort avant d'être né\n";
-                vretour = false;
+                verifmortsupnais++;
             }
-
+            if (verifmortsupnais == 2)
+            {
+                if (int.Parse(tbmort.Text) < int.Parse(tbnais.Text))
+                {
+                    msgErreur += "\t\u25C9\tLe Compositeur est mort avant d'être né\n";
+                    vretour = false;
+                }
+            }
+            verifmortsupnais = 0;
             return vretour;
         }
 
