@@ -39,9 +39,10 @@
             this.compositeurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parNationalitéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parStyleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parOeuvreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.parOeuvreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.compteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +51,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
-            this.compositeurToolStripMenuItem});
+            this.compositeurToolStripMenuItem,
+            this.compteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -110,16 +112,23 @@
             // parNationalitéToolStripMenuItem
             // 
             this.parNationalitéToolStripMenuItem.Name = "parNationalitéToolStripMenuItem";
-            this.parNationalitéToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.parNationalitéToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.parNationalitéToolStripMenuItem.Text = "Par nationalité";
             this.parNationalitéToolStripMenuItem.Click += new System.EventHandler(this.ParNationalitéToolStripMenuItem_Click);
             // 
             // parStyleToolStripMenuItem
             // 
             this.parStyleToolStripMenuItem.Name = "parStyleToolStripMenuItem";
-            this.parStyleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.parStyleToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.parStyleToolStripMenuItem.Text = "Par Style";
             this.parStyleToolStripMenuItem.Click += new System.EventHandler(this.ParStyleToolStripMenuItem_Click);
+            // 
+            // parOeuvreToolStripMenuItem
+            // 
+            this.parOeuvreToolStripMenuItem.Name = "parOeuvreToolStripMenuItem";
+            this.parOeuvreToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.parOeuvreToolStripMenuItem.Text = "Par Oeuvre";
+            this.parOeuvreToolStripMenuItem.Click += new System.EventHandler(this.ParOeuvreToolStripMenuItem_Click);
             // 
             // imageList1
             // 
@@ -139,12 +148,12 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // parOeuvreToolStripMenuItem
+            // compteToolStripMenuItem
             // 
-            this.parOeuvreToolStripMenuItem.Name = "parOeuvreToolStripMenuItem";
-            this.parOeuvreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.parOeuvreToolStripMenuItem.Text = "Par Oeuvre";
-            this.parOeuvreToolStripMenuItem.Click += new System.EventHandler(this.ParOeuvreToolStripMenuItem_Click);
+            this.compteToolStripMenuItem.Name = "compteToolStripMenuItem";
+            this.compteToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.compteToolStripMenuItem.Text = "Compte";
+            this.compteToolStripMenuItem.Click += new System.EventHandler(this.CompteToolStripMenuItem_Click);
             // 
             // FMenu
             // 
@@ -178,6 +187,7 @@
         private System.Windows.Forms.ToolStripMenuItem parNationalitéToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem parStyleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem parOeuvreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem compteToolStripMenuItem;
     }
 }
 
